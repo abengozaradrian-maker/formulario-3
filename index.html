@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar contraseñas</title>
+</head>
+<body>
+     <h1>Validacion de contraseñas</h1>
+     <form action="procesa.php" onsubmit="validaFormulario()" method="post">
+         <p>
+            <label for="">Usuario</label>
+            <input type="text" id="nombre" name="nombre">
+        </p>
+        <p>
+            <label for="">Contraseña</label>
+            <input type="password" id="contrase" name="contrase">
+        </p>
+        <p>
+            <label for="">Cambiar contraseña</label>
+            <input type="password" id="contrase2" name="contrase2">
+        </p>
+        <input type="submit" value="Registrar usuario">
+    </form>
+    <script>
+        function validaFormulario(){
+            let nombreAValidar = document.getElementById("nombre").value;
+            if ( nombreAValidar.length==0){
+                alert("El nombre no puede ser vacío");
+                return false
+            }
+            if (name.length<5){
+                alert("la longitud ")
+            }
+            let constraseAValidar = document.getElementById("contrase").value;
+            let contrase2 = document.getElementById("contrase2").value;
+            if (constraseAValidar != contrase2){
+                alert("La contraseña debe ser la misma");
+                return false;
+            }
+            if (constraseAValidar.length<6){
+               alert("La contraseña no puede ser menor que 6")
+               return false;
+            }
+            let contrase2 = document.getElementById("contrase2").value;
+            if (constraseAValidar.length<6){
+               alert("La contraseña no puede ser menor que 6")
+               return false;
+            }
+        }
+    </script>
+</body>
+</html>   
